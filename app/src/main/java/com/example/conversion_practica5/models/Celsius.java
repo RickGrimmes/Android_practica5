@@ -7,14 +7,15 @@ public class Celsius extends Grado{
         this.setUnidad("C");
     }
 
-    public Celsius parse(Farenheit F){
-        Double valor = (F.getValor() -32) * 5/9;
-        return new Celsius(valor);
+        public Celsius parse(Farenheit F){
+            Double valor = (F.getValor() *9/5) + 32;
+            return new Celsius(valor);
 
-    }
+        }
 
-    public Celsius parse(Kelvin K){
-        Double valor = (K.getValor() -273.15);
-        return new Celsius(valor);
-    }
+        //conversión a kelvin
+        public Celsius parse(Kelvin K) {
+            Double valor = this.getValor() + 273.15;
+            return new Celsius(valor);
+        }
 }

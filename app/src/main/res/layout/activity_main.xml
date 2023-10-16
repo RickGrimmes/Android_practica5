@@ -37,9 +37,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:background="@drawable/grisesillo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -48,74 +47,57 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="525dp"
-        android:gravity="left"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kelvin: "
-            android:fontFamily="@font/maincra"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/kelvinsillo"
-            android:layout_width="227dp"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:hint="Inserta grados aquí"
-            android:layout_marginStart="46sp"
-            tools:ignore="TouchTargetSizeCheck"
-            android:textSize="18sp"/>
-    </LinearLayout>
-
-
-
-    <LinearLayout
         android:background="@drawable/grisesillo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="425dp"
         android:gravity="left"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Celsius: "
             android:fontFamily="@font/maincra"
-            android:textStyle="bold"
+            android:text="¿Cuántos son..."
             android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/celsiusano"
-            android:layout_width="226dp"
+            android:id="@+id/iniciotxt"
+            android:layout_width="170dp"
+            android:inputType="number"
             android:layout_height="wrap_content"
-            android:layout_marginStart="31sp"
+            android:layout_marginStart="15sp"
+            android:fontFamily="@font/maincra"
             android:gravity="left"
             android:hint="Inserta grados aquí"
-            android:textSize="18sp"
+            android:textSize="15sp"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="390dp"
+        android:hint="@string/select">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/maincra"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <LinearLayout
         android:background="@drawable/grisesillo"
         android:layout_width="wrap_content"
@@ -125,16 +107,16 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="420dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="325dp"
+        android:layout_marginBottom="300dp"
         android:gravity="left"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-                android:text="Farenheit: "
+                android:text="Resultado: "
             android:fontFamily="@font/maincra"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -144,13 +126,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/farenheitxd"
+        <TextView
+            android:id="@+id/resultadotxt"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="-0sp"
             android:gravity="left"
-            android:hint="Inserta grados aquí"
+            android:hint="00"
             android:textSize="18sp"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>

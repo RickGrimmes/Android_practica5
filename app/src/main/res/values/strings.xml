@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Conversion_practica5</string>
+    <string name="app_name">Dropdown Menu</string>
+    <string name="select">... Grados...</string>
 </resources>
